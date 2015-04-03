@@ -135,7 +135,8 @@ void draw() {
   curveVertex(x6, y6); 
   curveVertex(x7, y7); 
   curveVertex(x8, y8); 
-  curveVertex(x1, y1); // Finish at one point past final control point (per Generative Design pg. 225)
+  curveVertex(x1, y1);
+  curveVertex(x2, y2);  // Finish at one point past final control point (per Generative Design pg. 225)
   endShape();
 
 }
