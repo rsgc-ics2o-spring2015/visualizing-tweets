@@ -11,27 +11,35 @@ float m, n;  // Centre of my circle
 float x1, y1;  // Co-ordinates for first control point
 float a1;      // Angle of rotation for first control point (degrees)
 float r1;      // Distance of control point from centre of circle
+float c1;      // Change value (speed at which this control point moves from centre)
 float x2, y2;  // Co-ordinates for first control point
 float a2;      // Angle of rotation for first control point (degrees)
 float r2;      // Distance of control point from centre of circle
+float c2;      // Change value (speed at which this control point moves from centre)
 float x3, y3;  // Co-ordinates for first control point
 float a3;      // Angle of rotation for first control point (degrees)
 float r3;      // Distance of control point from centre of circle
+float c3;      // Change value (speed at which this control point moves from centre)
 float x4, y4;  // Co-ordinates for first control point
 float a4;      // Angle of rotation for first control point (degrees)
 float r4;      // Distance of control point from centre of circle
+float c4;      // Change value (speed at which this control point moves from centre)
 float x5, y5;  // Co-ordinates for first control point
 float a5;      // Angle of rotation for first control point (degrees)
 float r5;      // Distance of control point from centre of circle
+float c5;      // Change value (speed at which this control point moves from centre)
 float x6, y6;  // Co-ordinates for first control point
 float a6;      // Angle of rotation for first control point (degrees)
 float r6;      // Distance of control point from centre of circle
+float c6;      // Change value (speed at which this control point moves from centre)
 float x7, y7;  // Co-ordinates for first control point
 float a7;      // Angle of rotation for first control point (degrees)
 float r7;      // Distance of control point from centre of circle
+float c7;      // Change value (speed at which this control point moves from centre)
 float x8, y8;  // Co-ordinates for first control point
 float a8;      // Angle of rotation for first control point (degrees)
 float r8;      // Distance of control point from centre of circle
+float c8;      // Change value (speed at which this control point moves from centre)
 boolean debug = false;  // Whether to print debug messages
 
 // This function runs once
@@ -53,41 +61,49 @@ void setup() {
   // First point
   a1 = 45;
   r1 = random(50, 100);
+  c1 = random(0, 1);
   x1 = m + r1*cos(radians(a1));
   y1 = n + r1*sin(radians(a1));
   // Second point
   a2 = 90;
   r2 = random(50, 100);
+  c2 = random(0, 1);
   x2 = m + r2*cos(radians(a2));
   y2 = n + r2*sin(radians(a2));
   // Third point
   a3 = 135;
   r3 = random(50, 100);
+  c3 = random(0, 1);
   x3 = m + r3*cos(radians(a3));
   y3 = n + r3*sin(radians(a3));
   // Fourth point
   a4 = 180;
   r4 = random(50, 100);
+  c4 = random(0, 1);
   x4 = m + r4*cos(radians(a4));
   y4 = n + r4*sin(radians(a4));
   // Fifth point
   a5 = 225;
   r5 = random(50, 100);
+  c5 = random(0, 1);
   x5 = m + r5*cos(radians(a5));
   y5 = n + r5*sin(radians(a5));
   // Sixth point
   a6 = 270;
   r6 = random(50, 100);
+  c6 = random(0, 1);
   x6 = m + r6*cos(radians(a6));
   y6 = n + r6*sin(radians(a6));
   // Seventh point
   a7 = 315;
   r7 = random(50, 100);
+  c7 = random(0, 1);
   x7 = m + r7*cos(radians(a7));
   y7 = n + r7*sin(radians(a7));
   // Eighth point
   a8 = 360;
   r8 = random(50, 100);
+  c8 = random(0, 1);
   x8 = m + r8*cos(radians(a8));
   y8 = n + r8*sin(radians(a8));
 }
@@ -130,7 +146,7 @@ void draw() {
     // Draw location of eighth control point
     ellipse(x8, y8, 5, 5);
     myText("8", x8, y8);
-  } 
+  }
 
   // Now draw the smooth circle joining all control points
   strokeWeight(0.25);
@@ -149,6 +165,44 @@ void draw() {
   curveVertex(x1, y1);
   curveVertex(x2, y2);  // Finish at one point past final control point (per Generative Design pg. 225)
   endShape();
+  
+  // Change radius values for each control point
+  // (this is another part where I think arrays will help make code more efficient)
+  r1 = r1 + c1;
+  r2 = r2 + c2;
+  r3 = r3 + c3;
+  r4 = r4 + c4;
+  r5 = r5 + c5;
+  r6 = r6 + c6;
+  r7 = r7 + c7;
+  r8 = r8 + c8;
+  
+  // Re-calculate position of control points
+  // Point 1
+  x1 = m + r1*cos(radians(a1));
+  y1 = n + r1*sin(radians(a1));
+  // Point 2
+  x2 = m + r2*cos(radians(a2));
+  y2 = n + r2*sin(radians(a2));
+  // Point 3
+  x3 = m + r3*cos(radians(a3));
+  y3 = n + r3*sin(radians(a3));
+  // Point 4
+  x4 = m + r4*cos(radians(a4));
+  y4 = n + r4*sin(radians(a4));
+  // Point 5
+  x5 = m + r5*cos(radians(a5));
+  y5 = n + r5*sin(radians(a5));
+  // Point 6
+  x6 = m + r6*cos(radians(a6));
+  y6 = n + r6*sin(radians(a6));
+  // Point 7
+  x7 = m + r7*cos(radians(a7));
+  y7 = n + r7*sin(radians(a7));
+  // Point 8
+  x8 = m + r8*cos(radians(a8));
+  y8 = n + r8*sin(radians(a8));
+
 }
 
 // Responds when a key is pressed on the keyboard
