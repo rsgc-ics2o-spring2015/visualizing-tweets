@@ -100,11 +100,12 @@ void draw() {
   translate(height/2, width/2); // Move origin to middle of canvas
   scale(1, -1);   // Positive values on y-axis above origin, not below
 
-  // For reference, draw a small point at centre of circle
-  fill(0, 0, 100); // White
-  ellipse(m, n, 5, 5);
-
+  // Show output that helps illustrate how program works
   if (debug) {
+    // For reference, draw a small point at centre of circle
+    fill(0, 0, 100); // White
+    ellipse(m, n, 5, 5);
+
     // Draw location of first control point
     myText("1", x1, y1);
     ellipse(x1, y1, 5, 5);
@@ -130,7 +131,7 @@ void draw() {
     ellipse(x8, y8, 5, 5);
     myText("8", x8, y8);
   } 
-  
+
   // Now draw the smooth circle joining all control points
   strokeWeight(0.25);
   stroke(0, 0, 100); // White
