@@ -8,6 +8,9 @@
 
 // Variables with global scope – accessible in any function below
 float m, n;  // Centre of my circle
+float x, y;  // Co-ordinates for first control point
+float a;     // Angle of rotation for first control point (degrees)
+float r;     // Distance of control point from centre of circle
 
 // This function runs once
 void setup() {
@@ -20,6 +23,12 @@ void setup() {
   
   // Black background
   background(0, 0, 0);
+  
+  // Initialize control point values
+  a = 45;
+  r = 100;
+  x = m + r*cos(radians(a));
+  y = n + r*sin(radians(a));
   
 }
 
@@ -34,5 +43,8 @@ void draw() {
   // For reference, draw a small point at centre of circle
   fill(0, 0, 100); // White
   ellipse(m, n, 5, 5);
+  
+  // Draw location of first control point
+  ellipse(x, y, 5, 5);
  
 }
