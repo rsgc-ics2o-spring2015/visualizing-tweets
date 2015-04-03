@@ -45,6 +45,9 @@ void setup() {
   // Black background
   background(0, 0, 0);
   
+  // Smoother edges for curves
+  smooth(8);
+  
   // Initialize control point values
   // First point
   a1 = 45;
@@ -117,5 +120,22 @@ void draw() {
   ellipse(x7, y7, 5, 5);
   // Draw location of eighth control point
   ellipse(x8, y8, 5, 5);
- 
+  
+  // Now draw the smooth circle joining all control points
+  strokeWeight(0.25);
+  stroke(0, 0, 100); // White
+  noFill();
+  beginShape();
+  curveVertex(x8, y8);  // Start at last point (per Generative Design pg. 225)
+  curveVertex(x1, y1); 
+  curveVertex(x2, y2); 
+  curveVertex(x3, y3); 
+  curveVertex(x4, y4); 
+  curveVertex(x5, y5); 
+  curveVertex(x6, y6); 
+  curveVertex(x7, y7); 
+  curveVertex(x8, y8); 
+  curveVertex(x1, y1); // Finish at one point past final control point (per Generative Design pg. 225)
+  endShape();
+
 }
