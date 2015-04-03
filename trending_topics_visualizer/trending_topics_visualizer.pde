@@ -32,23 +32,23 @@ float r7;      // Distance of control point from centre of circle
 float x8, y8;  // Co-ordinates for first control point
 float a8;      // Angle of rotation for first control point (degrees)
 float r8;      // Distance of control point from centre of circle
-boolean debug = true;  // Whether to print debug messages
+boolean debug = false;  // Whether to print debug messages
 
 // This function runs once
 void setup() {
-  
+
   // Make canvas
   size(500, 500);
-  
+
   // Use Hue-Saturation-Brightness colour model
   colorMode(HSB, 360, 100, 100);
-  
+
   // Black background
   background(0, 0, 0);
-  
+
   // Smoother edges for curves
   smooth(8);
-  
+
   // Initialize control point values
   // First point
   a1 = 45;
@@ -90,45 +90,46 @@ void setup() {
   r8 = random(50, 100);
   x8 = m + r8*cos(radians(a8));
   y8 = n + r8*sin(radians(a8));
-  
 }
 
 // This function runs repeatedly
 void draw() {
- 
+
   // Make the co-ordinate system in Processing behave like
   // a regular Cartesian co-ordinate system
   translate(height/2, width/2); // Move origin to middle of canvas
   scale(1, -1);   // Positive values on y-axis above origin, not below
-  
+
   // For reference, draw a small point at centre of circle
   fill(0, 0, 100); // White
   ellipse(m, n, 5, 5);
-  
-  // Draw location of first control point
-  ellipse(x1, y1, 5, 5);
-  if (debug) myText("1", x1, y1);
-  // Draw location of second control point
-  ellipse(x2, y2, 5, 5);
-  if (debug) myText("2", x2, y2);
-  // Draw location of third control point
-  ellipse(x3, y3, 5, 5);
-  if (debug) myText("3", x3, y3);
-  // Draw location of fourth control point
-  ellipse(x4, y4, 5, 5);
-  if (debug) myText("4", x4, y4);
-  // Draw location of fifth control point
-  ellipse(x5, y5, 5, 5);
-  if (debug) myText("5", x5, y5);
-  // Draw location of sixth control point
-  ellipse(x6, y6, 5, 5);
-  if (debug) myText("6", x6, y6);
-  // Draw location of seventh control point
-  ellipse(x7, y7, 5, 5);
-  if (debug) myText("7", x7, y7);
-  // Draw location of eighth control point
-  ellipse(x8, y8, 5, 5);
-  if (debug) myText("8", x8, y8);
+
+  if (debug) {
+    // Draw location of first control point
+    myText("1", x1, y1);
+    ellipse(x1, y1, 5, 5);
+    // Draw location of second control point
+    ellipse(x2, y2, 5, 5);
+    myText("2", x2, y2);
+    // Draw location of third control point
+    ellipse(x3, y3, 5, 5);
+    myText("3", x3, y3);
+    // Draw location of fourth control point
+    ellipse(x4, y4, 5, 5);
+    myText("4", x4, y4);
+    // Draw location of fifth control point
+    ellipse(x5, y5, 5, 5);
+    myText("5", x5, y5);
+    // Draw location of sixth control point
+    ellipse(x6, y6, 5, 5);
+    myText("6", x6, y6);
+    // Draw location of seventh control point
+    ellipse(x7, y7, 5, 5);
+    myText("7", x7, y7);
+    // Draw location of eighth control point
+    ellipse(x8, y8, 5, 5);
+    myText("8", x8, y8);
+  } 
   
   // Now draw the smooth circle joining all control points
   strokeWeight(0.25);
@@ -147,12 +148,11 @@ void draw() {
   curveVertex(x1, y1);
   curveVertex(x2, y2);  // Finish at one point past final control point (per Generative Design pg. 225)
   endShape();
-
 }
 
 // Responds when a key is pressed on the keyboard
 void keyPressed() {
- 
+
   // Save a screenshot when the 's' key is pressed
   if (key == 's') {
     saveFrame("output-#####.png");
@@ -170,9 +170,8 @@ void mousePressed() {
 // (works around apparent bug where text is printed upside down
 //  after 'scale' command flips the y-axis)
 void myText(String message, float x, float y) {
-  
+
   scale(1, -1);
   text(message, x+5, y*-1+5);
   scale(1, -1);
-  
 }
