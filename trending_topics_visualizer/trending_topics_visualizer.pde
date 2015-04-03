@@ -40,7 +40,7 @@ float x8, y8;  // Co-ordinates for first control point
 float a8;      // Angle of rotation for first control point (degrees)
 float r8;      // Distance of control point from centre of circle
 float c8;      // Change value (speed at which this control point moves from centre)
-boolean debug = false;  // Whether to print debug messages
+boolean debug = true;  // Whether to print debug messages
 
 // This function runs once
 void setup() {
@@ -110,6 +110,9 @@ void setup() {
 
 // This function runs repeatedly
 void draw() {
+  
+  // Clear background
+  background(0, 0, 0);
 
   // Make the co-ordinate system in Processing behave like
   // a regular Cartesian co-ordinate system
@@ -149,7 +152,7 @@ void draw() {
   }
 
   // Now draw the smooth circle joining all control points
-  strokeWeight(0.25);
+  strokeWeight(0.5);
   stroke(0, 0, 100); // White
   noFill();
   beginShape();
@@ -165,6 +168,22 @@ void draw() {
   curveVertex(x1, y1);
   curveVertex(x2, y2);  // Finish at one point past final control point (per Generative Design pg. 225)
   endShape();
+  
+  // Change increment values for each control point
+  // This is meant to simulate how control points will
+  // move when their radius is controlled by character
+  // frequency counts... it mostly produces what I expect
+  // the animation will look like when I can get my program
+  // to actually read tweets posted under the current trending
+  // topic on Twitter
+  if (floor(r1) % 20 == 0) c1 = random(0,1); // By using modulus, radius not changed as often
+  if (floor(r2) % 30 == 0) c2 = random(0,1);
+  if (floor(r3) % 40 == 0) c3 = random(0,1);
+  if (floor(r4) % 50 == 0) c4 = random(0,1);
+  if (floor(r5) % 20 == 0) c5 = random(0,1);
+  if (floor(r6) % 30 == 0) c6 = random(0,1);
+  if (floor(r7) % 40 == 0) c7 = random(0,1);
+  if (floor(r8) % 50 == 0) c8 = random(0,1);
   
   // Change radius values for each control point
   // (this is another part where I think arrays will help make code more efficient)
