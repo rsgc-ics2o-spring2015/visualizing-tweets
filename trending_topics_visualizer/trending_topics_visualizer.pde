@@ -155,7 +155,7 @@ void keyPressed() {
  
   // Save a screenshot when the 's' key is pressed
   if (key == 's') {
-    saveFrame("output.png");
+    saveFrame("output-#####.png");
   }
 }
 
