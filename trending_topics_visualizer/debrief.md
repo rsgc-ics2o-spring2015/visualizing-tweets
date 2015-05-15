@@ -29,7 +29,7 @@ If you only need to store integer values, it is better to create a variable of t
 
 I have also made use of *boolean* variables.  Boolean variables use very little memory, as they can store only two values: *true* or *false*.
 
-#### B1.5
+#### Expectation B1.5
 
 In my ISP, I had to make use of looping structures in several places.
 
