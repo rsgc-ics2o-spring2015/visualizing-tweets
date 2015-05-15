@@ -12,7 +12,7 @@ Variables allow a computer program to store data, or information, that must be k
 
 In Processing (which is a language based on Java), a variable has both a *name* and a *type*.
 
-In my independent study project, I made use of several different types of data.
+In my independent study project, I made use of several different types of variables.
 
 As [you can see here](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L10-17), I have declared variables of type:
 
