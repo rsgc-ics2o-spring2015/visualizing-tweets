@@ -33,7 +33,7 @@ I have also made use of *boolean* variables.  Boolean variables use very little 
 
 In my ISP, I had to make use of looping structures in several places.
 
-I [created several arrays](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L12-16) that track the position and speed at which the "[control](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/3cbddd4e0799211c468863c42c014322eaeda4ee-20150403112528811014-IMG_1450.JPG) [points](https://sesamehq.com/media/userprofiles/40742/attachments/0d5ffdc39a0e5129ba448a4418b4de511f804902-20150403112529018463-IMG_1451.JPG.480x320_q85_crop.jpg)" in my sketch move.
+I [created several arrays](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L12-16) that track the position and speed at which the "[control](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/3cbddd4e0799211c468863c42c014322eaeda4ee-20150403112528811014-IMG_1450.JPG) [points](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/0d5ffdc39a0e5129ba448a4418b4de511f804902-20150403112529018463-IMG_1451.JPG)" in my sketch move.
 
 In order to update these arrays, I had to [make](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L34-54) [use](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L75-87) of while loops.  The general idea is that since there are many elements in each array that need to be accesssed, or updated, I had to use a loop to move through each array and either access or update it's value.
 
