@@ -102,7 +102,7 @@ You can see [evidence of all of this here](https://github.com/rsgccs/visualizing
 
 This is an easy one.
 
-Earlier in the course, Mr. Gordon required us to use a basic program header to keep track of when we started a program, who the author was, and so on.
+Earlier in the course, Mr. Gordon required us to use a basic program header to keep track of when we started a program, who the author was, when the file was last revised, and so on.
 
 Later in the course, we started to use GitHub, which tracks every revision we have made to a program, along with a lot of other useful functionality (like being able to review the code written by other students in class to learn from them).
 
