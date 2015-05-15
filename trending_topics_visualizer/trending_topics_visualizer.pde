@@ -8,7 +8,7 @@
 
 // Variables with global scope – accessible in any function below
 float m, n;  // Centre of my circle
-int controlPointCount = 8; // How many control points to use
+int controlPointCount = 26; // How many control points to use
 float x[] = new float[controlPointCount];  // Horizontal positions for control points
 float y[] = new float[controlPointCount];  // Vertical positions for control points
 float a[] = new float[controlPointCount];  // Angle of rotation for control points
@@ -58,7 +58,7 @@ void setup() {
 void draw() {
 
   // Clear background
-  background(0, 0, 0);
+  //background(0, 0, 0);
 
   // Make the co-ordinate system in Processing behave like
   // a regular Cartesian co-ordinate system
