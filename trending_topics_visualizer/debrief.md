@@ -55,7 +55,7 @@ Planning out my program using storyboards, with point-form notes about what I in
 
 In writing my ISP, I learned (the hard way) about the various types of errors that I can encounter when writing a computer program.
 
-A **syntax error** is the most basic type of error that I could encounter.  For example, in Processing, a semi-colon character is required at the end of each statement.  If I forgot to include the semi-colon (this happened often when I was just starting out). I would not be able to run my program, and Processing would report the following error:
+A **syntax error** is the most basic type of error that I could encounter.  For example, in Processing, a semi-colon character is required at the end of each statement.  If I forgot to include the semi-colon (this happened often when I was just starting out) then I would not be able to run my program, and Processing would report the following error:
 
     Syntax error, insert ";" to complete BlockStatements
 
