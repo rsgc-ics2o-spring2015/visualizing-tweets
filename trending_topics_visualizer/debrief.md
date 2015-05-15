@@ -86,7 +86,17 @@ For this example, of course, I could fix my error by adjusting the comparison op
 
 Overall, my experience with all of these types of errors was both frustrating (very much so at times) but ultimately very helpful.  For example, over time I learned to become good at spotting syntax errors (usually I would scan any new code I'd wrote before running it, and see something that needed fixing).
 
+### B3: Writing programs
 
+#### Expectation B3.1
+
+In my ISP, more often than not, I wrote code that Mr. Gordon referred to as "human-readable".  My understanding of this is that I should:
+
+* indent code blocks appropriately (Processing's "Auto-Format" option – Command-T – was very helpful here)
+* use camelCasing and descriptive variable names
+* write comments that describe **intent** 
+
+You can see [evidence of all of this here](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde).
 
 
 
