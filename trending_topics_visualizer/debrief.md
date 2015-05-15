@@ -98,5 +98,22 @@ In my ISP, more often than not, I wrote code that Mr. Gordon referred to as "hum
 
 You can see [evidence of all of this here](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde).
 
+#### Expectation B3.2
 
+This is an easy one.
 
+Earlier in the course, Mr. Gordon required us to use a basic program header to keep track of when we started a program, who the author was, and so on.
+
+Later in the course, we started to use GitHub, which tracks every revision we have made to a program, along with a lot of other useful functionality (like being able to review the code written by other students in class to learn from them).
+
+You can see a list of [all the commits I made to my project here](https://github.com/rsgccs/visualizing-tweets/commits/master).
+
+#### Expectation B3.3
+
+I know that I only needed to do two minor expectations from each section, but I'm going to talk about this expectation too.
+
+Mr. Gordon showed us two ways to track down logic and run-time errors in our programs.
+
+One was to make use of the **println** function in Processing.  Basically, there were times when I *thought* my code was doing something, but in fact, it was never actually reaching that point in the program.  By placing **println** statements in strategic locations, I could verify whether my program was working the way that I thought.
+
+A second way (I only used this a little bit) was to make use of the debugger to step through my program code.  Here is [an example of me using the debugger](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/64076ebf82b1a421f0ba4313013091dcf7a4ffc2-20150403222021199095-My%20understanding%20of%20how%20arrays%20work.mov) (in this case, I was explaining to myself how arrays work).
