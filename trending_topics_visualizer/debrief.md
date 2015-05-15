@@ -37,5 +37,18 @@ I [created several arrays](https://github.com/rsgccs/visualizing-tweets/blob/mas
 
 In order to update these arrays, I had to [make](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L34-54) [use](https://github.com/rsgccs/visualizing-tweets/blob/master/trending_topics_visualizer/trending_topics_visualizer.pde#L75-87) of while loops.  The general idea is that since there are many elements in each array that need to be accesssed, or updated, I had to use a loop to move through each array and either access or update it's value.
 
+### B2: Writing programs
+
+#### Expectation B2.1
+
+In planning my program, I made use of a visual-problem solving model – specifically, a storyboard.
+
+You can see the progression here:
+
+1. The [initial appearance](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/0cf4b432f0dd406d084c1a12d6f5d41f642e7209-20150402130934624925-3.jpg) of my program.
+2. The [appearance a little later](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/d858c6c259247c5d1ebce5edbc20a78195e98b5b-20150402130934724821-4.jpg_) (after some text has been read and counts of each letter of alphabet determined).
+3. The [appearance after several "trending topics"](https://d2mjkw54krpgkk.cloudfront.net/userprofiles/40742/attachments/3dcc4e2fe3c009c7ab2fcca5c5894ab92df6b62d-20150402130935012985-5.jpg) have been visualized.
+
+Planning out my program using storyboards, with point-form notes about what I intended my program to do, was helpful in organizing my thoughts about how to write the actual code.
 
 
